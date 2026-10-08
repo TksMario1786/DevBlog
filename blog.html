@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+    <div class="system-bar">
+        <div class="container system-bar__inner">
+            <ul class="system-bar__indicators">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span class="system-bar__id">PORTAFOLIO PERSONAL</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="header__brand">
+                <span class="header__brand-name">Volver</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul class="nav__list">
+                        <li><a href="#inicio" class="nav__link">Inicio</a></li>
+                    <li><a href="#articulos" class="nav__link">Artículos</a></li>
+                    <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+                    <li><a href="#about" class="nav__link">Sobre mí</a></li>
+                </ul>
+            </nav>
+            <div class="header__status">
+                <span>LOCAL LOCAL</span>
+                <span class="header__status-dots">
+                    <span class="header__status-dot header__status-dot--active"></span>
+                    <span class="header__status-dot"></span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <span class="hero__kicker">PORTAFOLIO PERSONAL</span>
+                    <h1 class="hero__title"><span class="hero__highlight">Carlos Mario</span> Muñoz Díaz</h1>
+                    <p class="hero__description">Desarrollador en formación interesado en crear aplicaciones web y móviles. Aquí comparto proyectos, tecnologías que estoy explorando y parte de mi proceso de aprendizaje.</p>
+                    <div class="hero__actions">
+                        <a href="#articulos" class="btn btn--primary">Ver artículos</a>
+                        <a href="#proyectos" class="btn btn--secondary">Ver proyectos</a>
+                    </div>
+                    <ul class="hero__stats">
+                        <li>Desarrollo web</li>
+                        <li>Desarrollo móvil</li>
+                        <li>Aprendizaje continuo</li>
+                    </ul>
+                </div>
+                <div class="hero__visual">
+                    <div class="hero__ring">
+                        <img src="assets/images/hero-avatar.jpg" alt="Avatar del desarrollador" class="hero__avatar">
+                    </div>
+                    <span class="hero__system-id">SYSTEM_ID: FULL_STACK_DEV</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-strip" aria-label="Tecnologías">
+            <div class="container tech-strip__inner">
+                <ul class="tech-strip__list">
+                    <li class="tech-chip">Kotlin</li>
+                    <li class="tech-chip">Jetpack Compose</li>
+                    <li class="tech-chip">Android Studio</li>
+                    <li class="tech-chip">HTML</li>
+                    <li class="tech-chip">CSS</li>
+                    <li class="tech-chip">JavaScript</li>
+                    <li class="tech-chip">Git</li>
+                    <li class="tech-chip">GitHub</li>
+                </ul>
+                <span class="tech-strip__meta">Tecnologías usadas y en aprendizaje</span>
+            </div>
+        </section>
+
+        <section class="articles" id="articulos">
+            <div class="container">
+                <div class="articles__header">
+                    <div class="articles__intro">
+                        <span class="section-label">BITÁCORA</span>
+                        <div class="articles__title-group">
+                            <h2 class="articles__title">Artículos</h2>
+                            <span class="badge badge--count">0</span>
+                        </div>
+                        <p class="articles__description">Este espacio queda preparado para compartir notas y aprendizajes sobre desarrollo.</p>
+                    </div>
+                </div>
+
+                <div class="articles__grid" id="articulos-container"></div>
+            </div>
+        </section>
+
+        <section class="projects" id="proyectos">
+            <div class="container">
+                <div class="projects__header">
+                    <div>
+                        <span class="section-label">TRABAJO DESTACADO</span>
+                        <div class="projects__title-group">
+                            <h2 class="projects__title">Proyectos</h2>
+                            <span class="badge badge--count"></span>
+                        </div>
+                        <p class="projects__description">Aplicaciones y experimentos desarrollados para practicar ideas y tecnologías.</p>
+                    </div>
+                    <p class="projects__note">Una selección de mi trabajo</p>
+                </div>
+
+                <article class="featured-project">
+                    <div class="featured-project__media">
+                        <div class="featured-project__image placeholder-card__media"></div>
+                        <div class="featured-project__status">
+                            <div class="featured-project__status-top">
+                                <span></span>
+                                <span class="featured-project__status-online"></span>
+                            </div>
+                            <div class="featured-project__progress"><div class="featured-project__progress-bar"></div></div>
+                        </div>
+                    </div>
+                    <div class="featured-project__content">
+                        <ul class="featured-project__tags">
+                            <li class="badge"></li>
+                            <li class="badge"></li>
+                            <li class="badge badge--warning"></li>
+                            <li class="featured-project__tag-extra"></li>
+                        </ul>
+                        <h3 class="featured-project__title"></h3>
+                        <p class="featured-project__description"></p>
+                        <div class="featured-project__features">
+                            <ul class="featured-project__features-list">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="featured-project__features-list">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <ul class="featured-project__tech">
+                            <li class="tech-chip"></li>
+                            <li class="tech-chip"></li>
+                            <li class="tech-chip"></li>
+                        </ul>
+                        <div class="featured-project__actions">
+                            <a href="#" class="btn btn--primary"></a>
+                            <a href="#" class="btn btn--secondary"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="projects__secondary">
+                    <article class="project-mini">
+                        <div class="project-mini__top">
+                            <ul class="project-mini__tags">
+                                <li class="badge"></li>
+                                <li class="badge badge--warning"></li>
+                            </ul>
+                            <span class="project-mini__stars"></span>
+                        </div>
+                        <h3 class="project-mini__title"></h3>
+                        <p class="project-mini__description"></p>
+                        <ul class="project-mini__features">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul class="project-mini__tech">
+                            <li class="tech-chip"></li>
+                            <li class="tech-chip"></li>
+                            <li class="tech-chip"></li>
+                        </ul>
+                        <div class="project-mini__footer">
+                            <time datetime=""></time>
+                            <span></span>
+                        </div>
+                    </article>
+
+                    <article class="project-mini">
+                        <div class="project-mini__top">
+                            <ul class="project-mini__tags">
+                                <li class="badge"></li>
+                                <li class="badge badge--warning"></li>
+                            </ul>
+                            <span class="project-mini__stars"></span>
+                        </div>
+                        <h3 class="project-mini__title"></h3>
+                        <p class="project-mini__description"></p>
+                        <ul class="project-mini__features">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul class="project-mini__tech">
+                            <li class="tech-chip"></li>
+                            <li class="tech-chip"></li>
+                            <li class="tech-chip"></li>
+                        </ul>
+                        <div class="project-mini__footer">
+                            <time datetime=""></time>
+                            <span></span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container about__inner">
+                <div class="about__content">
+                    <span class="section-label">PERFIL</span>
+                    <h2 class="about__title">Sobre <span class="about__name">mí</span></h2>
+                    <h3 class="about__subtitle">Carlos Mario Muñoz Díaz · Desarrollador en formación</h3>
+                    <p class="about__text">Me interesa construir software útil y entender cómo cada parte de una aplicación trabaja en conjunto. Disfruto especialmente explorar el desarrollo móvil y web.</p>
+                    <p class="about__text">En mis proyectos busco aprender haciendo, probar nuevas herramientas y convertir los retos de clase o personales en experiencias prácticas.</p>
+                </div>
+
+                <aside class="stack">
+                    <div class="stack__header">
+                        <h3 class="stack__title">TECNOLOGÍAS</h3>
+                        <span class="stack__level">En aprendizaje</span>
+                    </div>
+                    <div class="stack__grid">
+                        <div class="stack__item"><span class="stack__name">Kotlin</span><span class="stack__detail">Aplicaciones Android</span></div>
+                        <div class="stack__item"><span class="stack__name">Jetpack Compose</span><span class="stack__detail">Interfaces móviles</span></div>
+                        <div class="stack__item"><span class="stack__name">JavaScript</span><span class="stack__detail">Interactividad web</span></div>
+                        <div class="stack__item"><span class="stack__name">HTML y CSS</span><span class="stack__detail">Estructura y estilos</span></div>
+                        <div class="stack__item"><span class="stack__name">Android Studio</span><span class="stack__detail">Entorno de desarrollo</span></div>
+                        <div class="stack__item"><span class="stack__name">Git y GitHub</span><span class="stack__detail">Control de versiones</span></div>
+                    </div>
+                    <p class="stack__footer">Mi stack sigue creciendo con cada proyecto.</p>
+                </aside>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <span class="footer__logo">PIXEL.DEV</span>
+                <p>Blog de desarrollo full stack. Todos los derechos reservados.</p>
+                <a href="index.html" class="footer__back">← Volver al Inicio</a>
+            </div>
+            <nav class="footer__nav" aria-label="Pie de página">
+                <ul class="footer__list">
+                    <li><a href="#articulos" class="footer__link">Artículos</a></li>
+                    <li><a href="#proyectos" class="footer__link">Proyectos</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li><a href="#about" class="footer__link">Sobre mí</a></li>
+                    <li><a href="index.html" class="footer__link">Landing</a></li>
+                </ul>
+                <ul class="footer__list" aria-label="Redes profesionales">
+                    <li><a href="#" class="footer__link">LinkedIn</a></li>
+                    <li><a href="#" class="footer__link">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="data/articulos.js"></script>
+    <script src="data/proyectos.js"></script>
+    <script src="js/blog.js"></script>
+
+</body>
+</html>
