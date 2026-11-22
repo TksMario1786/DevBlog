@@ -1,0 +1,19 @@
+syntax = "proto3";
+package cms.generator;
+
+service GeneratorService {
+  rpc SyncContent (SyncRequest) returns (SyncResponse);
+}
+
+message SyncRequest {
+  string entity_type = 1; // POST, PROYECTO o CERTIFICADO
+  string action = 2;      // UPSERT o DELETE
+  string entity_id = 3;
+  string payload_json = 4;
+}
+
+message SyncResponse {
+  bool success = 1;
+  string message = 2;
+  string compiled_at = 3;
+}
