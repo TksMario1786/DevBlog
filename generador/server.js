@@ -27,3 +27,12 @@ server.addService(proto.GeneratorService.service, {
 server.bindAsync('0.0.0.0:50051', grpc.ServerCredentials.createInsecure(), () => {
   console.log('[Generador gRPC] Escuchando en puerto 50051');
 });
+
+const http = require('http');
+const HEALTH_PORT = process.env.PORT || 10000;
+http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end('gRPC Generator OK');
+}).listen(HEALTH_PORT, '0.0.0.0', () => {
+  console.log(`[Healthcheck] Escuchando en puerto ${HEALTH_PORT}`);
+});
