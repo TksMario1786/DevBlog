@@ -27,14 +27,16 @@ class ContentService {
   }
   async publishPost(id) {
     const p = this.getPost(id);
-    p.publish();
+    p.status = 'PUBLISHED';
+    this.repos.posts.save(p);
     this.repos.posts.save(p);
     await this.generator.sync('POST', 'UPSERT', p.id, p);
     return p;
   }
   async archivePost(id) {
     const p = this.getPost(id);
-    p.archive();
+    p.status = 'ARCHIVED';
+    this.repos.posts.save(p);
     this.repos.posts.save(p);
     await this.generator.sync('POST', 'DELETE', p.id);
     return p;

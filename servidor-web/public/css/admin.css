@@ -1,0 +1,70 @@
+/* public/css/admin.css */
+.admin-section {
+    padding: var(--space-8) 0;
+    border-bottom: 1px solid var(--blog-green-dim);
+}
+.editor-card {
+    background-color: var(--blog-card);
+    border: 1.5px solid var(--blog-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--blog-glow);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+.editor-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+@media (min-width: 768px) {
+    .editor-grid { grid-template-columns: 2fr 1fr; }
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+.form-label {
+    font-size: var(--text-xs);
+    color: var(--blog-green-soft);
+}
+.form-input, .form-textarea, .form-select {
+    width: 100%;
+    padding: var(--space-3);
+    background-color: var(--blog-card-2);
+    border: 1px solid var(--blog-border);
+    border-radius: var(--radius-sm);
+    color: var(--blog-text);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+}
+.form-textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: var(--line-height-relaxed);
+}
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+    outline: none;
+    border-color: var(--blog-green);
+}
+.status-banner {
+    display: none;
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    font-size: 0.7rem;
+    border: 1px solid var(--blog-green);
+    background-color: rgba(34, 197, 94, 0.12);
+    color: var(--blog-green-soft);
+}
+.status-banner--error {
+    border-color: rgba(250, 204, 21, 0.6);
+    background-color: var(--blog-yellow-bg);
+    color: var(--blog-yellow);
+}
+.card-actions {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}

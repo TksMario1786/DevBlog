@@ -10,6 +10,7 @@ module.exports = (controller) => {
   router.get('/api/v1/admin/posts/:id', controller.getPost);
   router.post('/api/v1/admin/posts', idempotency, controller.createPost);
   router.put('/api/v1/admin/posts/:id', idempotency, controller.updatePost);
+  router.patch('/api/v1/admin/posts/:id/publish', idempotency, controller.publishPost);
   router.post('/api/v1/admin/posts/:id/publish', idempotency, controller.publishPost);
   router.post('/api/v1/admin/posts/:id/archive', idempotency, controller.archivePost);
 

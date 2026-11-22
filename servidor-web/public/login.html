@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Admin · DevBlog</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="system-bar">
+        <div class="container system-bar__inner">
+            <span class="system-bar__id">AUTH // MODO ADMINISTRADOR</span>
+            <span class="system-bar__id">TLS · BEARER TOKEN</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="blog.html" class="header__brand">
+                <span class="header__brand-name">← Volver al DevBlog</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="login-wrapper">
+        <form class="login-card" id="login-form">
+            <div>
+                <span class="section-label">CONTROL DE ACCESO</span>
+                <h2>Iniciar Sesión</h2>
+                <p style="font-size: 0.7rem; margin-top: 0.25rem;">Ingresa tu llave de administrador para gestionar el contenido.</p>
+            </div>
+
+            <div class="login-error" id="login-error"></div>
+
+            <div class="form-group">
+                <label class="form-label" for="admin-key">ADMIN_API_KEY</label>
+                <input class="form-input" type="password" id="admin-key" placeholder="••••••••••••••••" required autocomplete="current-password">
+            </div>
+
+            <button type="submit" class="btn btn--primary" id="login-btn" style="justify-content: center;">
+                Autenticar y entrar →
+            </button>
+        </form>
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
