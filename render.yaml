@@ -1,18 +1,17 @@
-# 1. Base de Datos Postgres (Gestionada por Render)
 databases:
   - name: devblog-db
     plan: free
 
 services:
-  # 2. Generador gRPC (Servicio Privado, no expuesto a internet)
-  - type: pserv
+  # 2. Generador gRPC (Cambiado a 'web' para el plan gratuito)
+  - type: web
     name: grpc-generator
     env: node
     plan: free
     buildCommand: cd generador && npm install
     startCommand: cd generador && node server.js
 
-  # 3. CMS Admin API (Backend web transaccional)
+  # 3. CMS Admin API 
   - type: web
     name: cms-admin
     env: node
@@ -27,9 +26,9 @@ services:
       - key: NODE_ENV
         value: production
       - key: GRPC_HOST
-        value: grpc-generator:50051 # Comunicación interna segura de Render
+        value: grpc-generator:50051 
 
-  # 4. Servidor Web Público (Archivos estáticos y Jamstack)
+  # 4. Servidor Web Público 
   - type: web
     name: devblog-public
     env: node
