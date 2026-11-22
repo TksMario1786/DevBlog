@@ -1,9 +1,9 @@
-services:
-  # 1. Base de Datos Postgres (Gestionada por Render)
-  - type: psql
-    name: devblog-db
+# 1. Base de Datos Postgres (Gestionada por Render)
+databases:
+  - name: devblog-db
     plan: free
 
+services:
   # 2. Generador gRPC (Servicio Privado, no expuesto a internet)
   - type: pserv
     name: grpc-generator
