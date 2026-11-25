@@ -26,20 +26,25 @@ class ContentService {
     return p;
   }
   async publishPost(id) {
-    const p = this.getPost(id);
+    const p = await this.repos.posts.findById(id); // <-- Aquí faltaba el await
+    if (!p) {
+        const err = new Error('Artículo no encontrado');
+        err.status = 404;
+        throw err;
+    }
     p.status = 'PUBLISHED';
-    this.repos.posts.save(p);
-    this.repos.posts.save(p);
-    await this.generator.sync('POST', 'UPSERT', p.id, p);
-    return p;
+    return await this.repos.posts.save(p);
   }
+
   async archivePost(id) {
-    const p = this.getPost(id);
-    p.status = 'ARCHIVED';
-    this.repos.posts.save(p);
-    this.repos.posts.save(p);
-    await this.generator.sync('POST', 'DELETE', p.id);
-    return p;
+      const p = await this.repos.posts.findById(id); // <-- Verifica también aquí
+      if (!p) {
+          const err = new Error('Artículo no encontrado');
+          err.status = 404;
+          throw err;
+      }
+      p.status = 'ARCHIVED';
+      return await this.repos.posts.save(p);
   }
 
   // --- PROYECTOS ---
